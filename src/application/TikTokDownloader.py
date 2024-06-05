@@ -203,6 +203,7 @@ class TikTokDownloader:
         self.logger = {True: LoggerManager, False: BaseLogger}[l]
 
     def check_update(self):
+        return
         if self.UPDATE["path"].exists():
             return
         try:

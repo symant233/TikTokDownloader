@@ -15,7 +15,7 @@ __all__ = ["Settings"]
 
 
 class Settings:
-    encode = "UTF-8-SIG" if system() == "Windows" else "UTF-8"
+    encode = "UTF-8-SIG"
     default = {
         "accounts_urls": [
             {"mark": "账号标识，可以设置为空字符串",

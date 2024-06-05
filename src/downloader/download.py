@@ -297,11 +297,11 @@ class Downloader:
                 item["downloads"].split(" "), start=1):
             if self.is_in_blacklist(id_):
                 count.skipped_image.add(id_)
-                self.log.info(f"图集 {id_} 存在下载记录，跳过下载")
+                # self.log.info(f"图集 {id_} 存在下载记录，跳过下载")
                 count.skipped_image.add(id_)
                 break
             elif self.is_exists(p := actual_root.with_name(f"{name}_{index}.jpeg")):
-                self.log.info(f"图集 {id_}_{index} 文件已存在，跳过下载")
+                # self.log.info(f"图集 {id_}_{index} 文件已存在，跳过下载")
                 self.log.info(f"文件路径: {p.resolve()}", False)
                 count.skipped_image.add(id_)
                 continue
@@ -326,7 +326,7 @@ class Downloader:
         if self.is_skip(
                 id_, p := actual_root.with_name(
                     f"{name}.mp4")):
-            self.log.info(f"视频 {id_} 存在下载记录或文件已存在，跳过下载")
+            # self.log.info(f"视频 {id_} 存在下载记录或文件已存在，跳过下载")
             self.log.info(f"文件路径: {p.resolve()}", False)
             count.skipped_video.add(id_)
             return
